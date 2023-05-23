@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                git branch: 'main', credentialsId: 'b52c638a-b597-4b6c-8788-dbc6eb2c1276', url: 'https://github.com/arevalom3/tg_devops.git'
+            }
+        }
+    }
+}
